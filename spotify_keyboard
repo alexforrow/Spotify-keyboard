@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Install
-# Place in ~/bin
-# sudo aptitude install xwit xvkbd wmctrl
-
 if [ "x$1" == "x" ];then
 	command=" "
 else
@@ -16,9 +12,7 @@ ID=`xwininfo -root -children | grep $WINDOW | grep -v "has no name" | awk '{prin
 
 if [ "x$ID" == "x" ]; then
 	echo Spotify is not running
-	nohup spotify &
-	#sleep 3
-	#xvkbd -xsendevent -text " "
+	#nohup spotify &
 	exit 1
 fi
 
